@@ -45,3 +45,9 @@
 .App {
   background-color: #282c34;
 }
+.notes{
+  color: #f6f9ff;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+}

@@ -53,11 +53,10 @@ function App() {
           amount={expenses[3].amount}
           date={expenses[3].date}
         ></ExpenseList>
-        <div>
+        <div className='notes'>
           <p>
-             on vid 14 <br></br>
-             improve css and add flex size in % and give margin so the boxes can be spaced
-
+             on vid 15 <br></br>
+             add ExpenseDate.css from tutorial and add classname to html element to make them more presentable
           </p>
         </div>
       </div>
