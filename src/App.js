@@ -57,8 +57,8 @@ function App() {
         ></ExpenseList>
         <div className='notes'>
           <p>
-             on vid 19 <br></br>
-             github samajhna hy bc ma behan ik hui wi code ki merge bhe krna hy errors resolve krna han branching seekhni han.
+             on 2nd module <br></br>
+             Work on  <card>Card</card>   and usestate.
           </p>
         </div>
         </Card>
