@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import ExpenseList from "./components/ExpenseList";
 //import Expense from "./components/Expense";
 //import Header from "./components/Header";
-impo
+
 function App() {
   const expenses = [
     {
