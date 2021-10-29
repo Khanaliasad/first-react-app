@@ -57,8 +57,8 @@ function App() {
         ></ExpenseList>
         <div className='notes'>
           <p>
-             on vid 15 <br></br>
-             add ExpenseDate.css from tutorial and add classname to html element to make them more presentable
+             on vid 19 <br></br>
+             github samajhna hy bc ma behan ik hui wi code ki merge bhe krna hy errors resolve krna han branching seekhni han.
           </p>
         </div>
         </Card>
