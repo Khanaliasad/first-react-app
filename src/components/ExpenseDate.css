@@ -1,0 +1,11 @@
+.expece-date {
+  border: solid;
+  border-color: white;
+  border-style: outset;
+  border-radius: inherit;
+  padding: inherit;
+  font-size: 0.85rem;
+  font-family: "Noto Sans JP";
+  font-style: bold;
+  color: ivory;
+}

@@ -37,6 +37,17 @@
   border-radius: 12px;
 }
 
+.expece-date {
+  border: solid;
+  border-color: white;
+  border-style: outset;
+  border-radius: inherit;
+  padding: inherit;
+  font-size: 0.85rem;
+  font-family: "Noto Sans JP";
+  font-style: bold;
+  color: ivory;
+}
 @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;
@@ -54,15 +65,4 @@
     padding: 0.5rem 1.5rem;
   }
 
-  .expece-date {
-    border: solid;
-    border-color: white;
-    border-style: outset;
-    border-radius: inherit;
-    padding: inherit;
-    font-size: 0.85rem;
-    font-family: "Noto Sans JP";
-    font-style: bold;
-    color: ivory;
-  }
 }
