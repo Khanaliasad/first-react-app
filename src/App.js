@@ -1,8 +1,9 @@
 import "./App.css";
+import Card from "./components/Card";
 import ExpenseList from "./components/ExpenseList";
 //import Expense from "./components/Expense";
 //import Header from "./components/Header";
-
+impo
 function App() {
   const expenses = [
     {
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <div>
+        <Card>
         <ExpenseList
           title={expenses[0].title}
           amount={expenses[0].amount}
@@ -60,9 +62,9 @@ function App() {
 
           </p>
         </div>
+        </Card>
       </div>
-    </div>
+      </div>
   );
 }
-
 export default App;
