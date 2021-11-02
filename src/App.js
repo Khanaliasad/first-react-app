@@ -1,6 +1,7 @@
 import "./App.css";
 import Card from "./components/Card";
 import ExpenseList from "./components/ExpenseList";
+import NewExpense from "./components/NewExpence/NewExpense";
 //import Expense from "./components/Expense";
 //import Header from "./components/Header";
 
@@ -34,36 +35,38 @@ function App() {
   return (
     <div className="App">
       <div>
+      <NewExpense/>
         <Card>
-        <ExpenseList
-          title={expenses[0].title}
-          amount={expenses[0].amount}
-          date={expenses[0].date}
-        ></ExpenseList>
-        <ExpenseList
-          title={expenses[1].title}
-          amount={expenses[1].amount}
-          date={expenses[1].date}
-        ></ExpenseList>
-        <ExpenseList
-          title={expenses[2].title}
-          amount={expenses[2].amount}
-          date={expenses[2].date}
-        ></ExpenseList>
-        <ExpenseList
-          title={expenses[3].title}
-          amount={expenses[3].amount}
-          date={expenses[3].date}
-        ></ExpenseList>
-        <div className='notes'>
-          <p>
-             on 2nd module <br></br>
-             Work on  <card>Card</card>   and usestate.
-          </p>
-        </div>
+          
+          <ExpenseList
+            title={expenses[0].title}
+            amount={expenses[0].amount}
+            date={expenses[0].date}
+          ></ExpenseList>
+          <ExpenseList
+            title={expenses[1].title}
+            amount={expenses[1].amount}
+            date={expenses[1].date}
+          ></ExpenseList>
+          <ExpenseList
+            title={expenses[2].title}
+            amount={expenses[2].amount}
+            date={expenses[2].date}
+          ></ExpenseList>
+          <ExpenseList
+            title={expenses[3].title}
+            amount={expenses[3].amount}
+            date={expenses[3].date}
+          ></ExpenseList>
+          <div className="notes">
+            <p>
+              on 2nd module vid 4 <br></br>
+              Work on Card and usestate.
+            </p>
+          </div>
         </Card>
       </div>
-      </div>
+    </div>
   );
 }
 export default App;
