@@ -32,10 +32,15 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+const formExpenceDataHandeler=(data) => {
+  const ExpenseDataFromForm = {...data};
+  console.log(ExpenseDataFromForm)
+}
+
   return (
     <div className="App">
       <div>
-      <NewExpense/>
+      <NewExpense formExpenceData={formExpenceDataHandeler} />
         <Card>
           
           <ExpenseList 
@@ -60,8 +65,8 @@ function App() {
           ></ExpenseList>
           <div className="notes">
             <p>
-              on 2nd module vid 6 <br></br>
-              Work on Card and usestate.
+              on 4th module vid 15 <br></br>
+              check the concept for state lifting in ./NewExpense folder
             </p>
           </div>
         </Card>

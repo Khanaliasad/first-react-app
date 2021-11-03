@@ -2,7 +2,7 @@ import React from "react";
 import "./ExpenseForm.css";
 import "../Expense.css";
 import { useState } from "react";
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setenteredTitle] = useState("");
   const [enteredAmount, setenteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -19,28 +19,38 @@ const ExpenseForm = () => {
     setEnteredDate(event.target.value);
     // console.log(event.target.value);
   };
-  function getRandomInt(min=1, max=1000) {
+  function getRandomInt(min = 1, max = 1000) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   const SubmitHandeler = (event) => {
     // methord to prevent page from reloding while clicking the submit button
     event.preventDefault();
-   //parsing for data into an object
+    //parsing for data into an object
     const expenceData = {
       id: getRandomInt(),
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expenceData);
-    //after saving the input values in expenseData after the submit event 
-    //we need to set values of input into empty string 
+    //prop(onSaveExpenseData) Made on parent component and executing a function init
+    // <ExpenseForm onSaveExpenseData = {saveExpenseDataHandeler} />
+    // const saveExpenseDataHandeler = (enteredExpenseData) => {
+    //   const expenseData = { ...enteredExpenseData };
+    //   console.log(expenseData);
+    // };
+
+    props.onSaveExpenseData(expenceData);
+    // console.log(expenceData);
+
+
+    //after saving the input values in expenseData after the submit event
+    //we need to set values of input into empty string
     //so we again initialize [setenteredTitle][setenteredAmount][setenteredDate] from useState("");
     // into an empty string  HOW??
     // by setting [value={enteredTitle} *and vice versa*] in every input &
-      setenteredTitle('');
-      setenteredAmount('');
-      setEnteredDate('');
+    setenteredTitle("");
+    setenteredAmount("");
+    setEnteredDate("");
   };
 
   return (
