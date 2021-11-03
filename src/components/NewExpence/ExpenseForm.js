@@ -9,24 +9,38 @@ const ExpenseForm = () => {
 
   const titleChangeHandeler = (event) => {
     setenteredTitle(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
   const amountChangeHandeler = (event) => {
     setenteredAmount(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
   const dateChangeHandeler = (event) => {
     setEnteredDate(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
+  function getRandomInt(min=1, max=1000) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
   const SubmitHandeler = (event) => {
+    // methord to prevent page from reloding while clicking the submit button
     event.preventDefault();
+   //parsing for data into an object
     const expenceData = {
+      id: getRandomInt(),
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expenceData)
+    console.log(expenceData);
+    //after saving the input values in expenseData after the submit event 
+    //we need to set values of input into empty string 
+    //so we again initialize [setenteredTitle][setenteredAmount][setenteredDate] from useState("");
+    // into an empty string  HOW??
+    // by setting [value={enteredTitle} *and vice versa*] in every input &
+      setenteredTitle('');
+      setenteredAmount('');
+      setEnteredDate('');
   };
 
   return (
@@ -38,6 +52,7 @@ const ExpenseForm = () => {
             <input
               id="title"
               type="text"
+              value={enteredTitle}
               onChange={titleChangeHandeler}
               placeholder="enter the fukn titte"
             ></input>
@@ -48,6 +63,7 @@ const ExpenseForm = () => {
             <input
               id="amount"
               type="number"
+              value={enteredAmount}
               min="0.01"
               step="0.01"
               onChange={amountChangeHandeler}
@@ -57,6 +73,7 @@ const ExpenseForm = () => {
             <label>Date</label>
             <input
               type="date"
+              value={enteredDate}
               min="2000-01-01"
               max="2022-12-31"
               onChange={dateChangeHandeler}
