@@ -1,11 +1,13 @@
 import "./App.css";
 import Card from "./components/Card";
 import ExpenseList from "./components/ExpenseList";
+import Expense from "./components/Expense";
 import NewExpense from "./components/NewExpence/NewExpense";
 //import Expense from "./components/Expense";
 //import Header from "./components/Header";
 
 function App() {
+  let symb = '>'
   const expenses = [
     {
       id: "e1",
@@ -32,18 +34,18 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-const formExpenceDataHandeler=(data) => {
-  const ExpenseDataFromForm = {...data};
-  console.log(ExpenseDataFromForm)
-}
+  const formExpenceDataHandeler = (data) => {
+    const ExpenseDataFromForm = { ...data };
+    console.log(ExpenseDataFromForm);
+  };
 
   return (
     <div className="App">
       <div>
-      <NewExpense formExpenceData={formExpenceDataHandeler} />
+        <NewExpense formExpenceData={formExpenceDataHandeler} />
         <Card>
-          
-          <ExpenseList 
+          <Expense item={expenses} />
+          <ExpenseList
             title={expenses[0].title}
             amount={expenses[0].amount}
             date={expenses[0].date}
@@ -66,7 +68,8 @@ const formExpenceDataHandeler=(data) => {
           <div className="notes">
             <p>
               on 4th module vid 15 <br></br>
-              check the concept for state lifting in ./NewExpense folder
+              idk what im doing next topic is map because for loop does not work
+              = {symb}  fuck u jsx
             </p>
           </div>
         </Card>
