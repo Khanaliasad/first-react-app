@@ -1,6 +1,6 @@
 import React from "react";
 import "./NewExpense.css";
-import Card from '../Card'
+// import Card from '../Card'
 import ExpenseForm from './ExpenseForm'
 
 

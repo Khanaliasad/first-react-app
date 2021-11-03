@@ -60,7 +60,7 @@ function App() {
           ></ExpenseList>
           <div className="notes">
             <p>
-              on 2nd module vid 4 <br></br>
+              on 2nd module vid 6 <br></br>
               Work on Card and usestate.
             </p>
           </div>
