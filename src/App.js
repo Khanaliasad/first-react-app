@@ -1,6 +1,6 @@
 import "./App.css";
 import Card from "./components/Card";
-import React, {useState } from 'react'
+// import React, {useState } from 'react'
 
 import Expense from "./components/Expense";
 import NewExpense from "./components/NewExpence/NewExpense";
@@ -35,13 +35,12 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  const [Expense_arr, setExpense_arr] = useState(expenses)
-    const formExpenceDataHandeler = (data) => {
-    const ExpenseDataFromForm = { ...data };
-    let expenses_list = expenses.push('')
-    setExpense_arr(expenses_list)
-    console.log(Expense_arr)
-  };
+
+   
+  const formExpenceDataHandeler = (data) => {
+    const ExpenseDataFromForm = { ...data }
+    console.log(data)
+   };
 
   return (
     <div className="App">
