@@ -4,8 +4,6 @@ import "./Expense.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "./Card";
 function Expense(props) {
-  
-
   // const [Title, setTitle] = useState(props.title);
   // const Click_Handeler = () => {
   //   console.log(Title);
@@ -13,21 +11,21 @@ function Expense(props) {
   // };
 
   // setTitle("Updated BITCH!!!")}
-  const Title = props.title
+  const Title = props.title;
   return (
     <Card>
       <div className="expense-item">
         <ExpenseDate date={props.date}></ExpenseDate>
         <div className="expense-item__description">
           <h2>{Title}</h2>
-          {/* <Card>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+      </div>
+      {/* <Card>
             <button className="expense-item__price" onClick={Click_Handeler}>
               Change Item
             </button>
           </Card> */}
-          <div className="expense-item__price">${props.amount}</div>
-        </div>
-      </div>
     </Card>
   );
 }
