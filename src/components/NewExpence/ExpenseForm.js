@@ -5,7 +5,10 @@ import { useState } from "react";
 const ExpenseForm = (props) => {
   const [enteredTitle, setenteredTitle] = useState("");
   const [enteredAmount, setenteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
+  const [enteredDate, setEnteredDate] = useState(new Date(Date.now()).toLocaleString().split(', ')[0]);
+
+  var dateString = new Date(Date.now()).toLocaleString()
+  
 
   const titleChangeHandeler = (event) => {
     setenteredTitle(event.target.value);
@@ -42,7 +45,6 @@ const ExpenseForm = (props) => {
     props.onSaveExpenseData(expenceData);
     // console.log(expenceData);
 
-
     //after saving the input values in expenseData after the submit event
     //we need to set values of input into empty string
     //so we again initialize [setenteredTitle][setenteredAmount][setenteredDate] from useState("");
@@ -50,7 +52,7 @@ const ExpenseForm = (props) => {
     // by setting [value={enteredTitle} *and vice versa*] in every input &
     setenteredTitle("");
     setenteredAmount("");
-    setEnteredDate("");
+    setEnteredDate(new Date(Date.now()).toLocaleString().split(', ')[0]);
   };
 
   return (

@@ -1,10 +1,9 @@
 import Expense from "./components/Expense";
 import NewExpense from "./components/NewExpence/NewExpense";
-//import Expense from "./components/Expense";
 import "./App.css";
 import Card from "./components/Card";
+import ExpenseFilter from "./components/Filter/ExpenseFilter";
 import React, { useState } from "react";
-
 
 //import Header from "./components/Header";
 
@@ -33,27 +32,31 @@ let Dummy_Data = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
-]
+];
 
 function App() {
   let symb = ">";
-  //const [Expense, setExpense] = useState(Dummy_Data);
+const [Expenses, setExpenses] = useState(Dummy_Data)
+
   const formExpenceDataHandeler = (data) => {
-    const ExpenseDataFromForm = { ...data };
-    // setExpense(data)
+   setExpenses((PrevExpenses) => {
+    return [data, ...PrevExpenses]; 
+   })
   };
   return (
     <div className="App">
       <div>
         <NewExpense formExpenceData={formExpenceDataHandeler} />
         <Card>
-          <Expense item={Dummy_Data} />
+          <Expense item={Expenses} />
           <div className="notes">
             <p>
-              on 4th module vid 15 <br></br>
+              on 5th module 3rd Last Video <br></br>
               idk what im doing next topic is map because for loop does not work
               = {symb} fuck u jsx
-              <br/> Update!!<br/> data is dynamic but runned into an error while updating array of dummy text now known as dummy text 
+              <br /> Update!!
+              <br /> data is dynamic but runned into an error while updating
+              array of dummy text now known as dummy text
             </p>
           </div>
         </Card>

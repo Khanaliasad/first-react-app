@@ -34,3 +34,13 @@
   justify-content: center;
   
 }
+
+.expenses-filter__none {
+  border: 1px solid #ececec;
+  background-color: #3b3a3a;
+  color: white;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  
+}
