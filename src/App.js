@@ -52,11 +52,7 @@ const [Expenses, setExpenses] = useState(Dummy_Data)
           <div className="notes">
             <p>
               on 5th module 3rd Last Video <br></br>
-              idk what im doing next topic is map because for loop does not work
-              = {symb} fuck u jsx
-              <br /> Update!!
-              <br /> data is dynamic but runned into an error while updating
-              array of dummy text now known as dummy text
+              
             </p>
           </div>
         </Card>
